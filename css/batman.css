@@ -13,7 +13,7 @@ body, html {
     letter-spacing: .15em; /* Adjust as needed */
     /* animation-delay: 25s; */
     animation: 
-      typing 5s steps(88, end) 16s,
+      typing 5s steps(44, end) 16s,
       blink-caret .75s step-end infinite 16s;
   }
   
