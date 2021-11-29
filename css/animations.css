@@ -1,0 +1,115 @@
+#color-changing {
+    width: 100px;
+    height: 100px;
+    /* will change to this color after animation */
+    background-color: red;
+    animation-name: color-changer;
+    /* animation durition defaults to 0 so if not include no animation */
+    animation-duration: 4s;  
+    animation-direction: alternate;
+
+  }
+  
+  @keyframes color-changer {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+
+  #moving-color-changing {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name:  moving-color-changer;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    /* roll through the animation direction options */
+    animation-direction: alternate;  
+    /* make it do this forever */
+    animation-iteration-count:infinite;
+
+  }
+  
+  @keyframes moving-color-changer {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+#bounces-in{
+    background-color: indigo;
+    width:100px;
+    height:100;
+    animation-duration: 10s;
+    animation-name: bounceInUp;
+}
+
+  @keyframes bounceInUp {
+    0%, 60%, 75%, 90%, 100% {
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+ #slides-right{
+    background-color: tomato;
+    width:100px;
+    height:100;
+    animation-duration: 10s;
+    animation-name: slideInRight;
+ } 
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translate3d(2000%, 0, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+ 
+  #slides-left{
+    background-color: cornflowerblue;
+    width:100px;
+    height:100;
+    animation-duration: 10s;
+    animation-name: slideInLeft;
+ } 
+  @keyframes slideInLeft {
+    0% {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+

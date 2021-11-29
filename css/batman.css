@@ -1,0 +1,214 @@
+/* https://codepen.io/anthonydugois/pen/mewdyZ */
+
+body, html {
+    height: 100%;
+}
+
+.type-writer {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    /* animation-delay: 25s; */
+    animation: 
+      typing 5s steps(40, end) 16s,
+      blink-caret .75s step-end infinite 16s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  /* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/batman.jpg");
+    /* Set a specific height */
+    height: 80%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    /* Set out slideshow */
+    animation: startscreen, splat, batmankick, pow, batlogo;
+    animation-delay:    0s, 6s, 8s, 9.25s, 12.25s;
+    animation-duration: 6s, 2s, 1.25s, 3s, 2s;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* don't show until after the animation */
+    animation:hide-text;
+    animation-duration:16s;
+  }
+
+  /* set up all our bats to work with the animation */
+  .bat{
+    position: absolute;
+    visibility: hidden;
+    animation-name: batflight;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-delay:2s;
+    height:50px;
+  }
+
+  /* create all our bats at randoms positions with random paths */
+  #bat1{
+    top:-500px;
+    left:-500px;
+    offset-path: path('M 100 300 Q 150 50 200 300 Q 250 550 300 300 Q 350 50 400 300 C 450 550 450 50 500 300 C 550 50 550 550 600 300 A 50 50 0 1 1 700 300 ');
+  }
+
+  #bat2{
+    top:-200px;
+    left:200px;
+    offset-path: path('M 50 150 Q 650 300 600 350 Q 0 200 100 250 Q 0 450 600 200 C 100 450 600 600 50 550 C 50 300 475 375 200 250 C 350 50 150 100 800 50 ');
+
+  }
+  #bat3{
+    top:-350px;
+    left:-375px;
+    offset-path: path('M 50 50 Q 250 300 600 50 Q 500 300 50 300 Q 0 450 200 450 C 450 550 700 550 450 450 C 50 350 475 375 600 200 C 550 300 600 600 800 50 ');
+  }
+  #bat4{
+    top:40px;
+    left:250px;
+    offset-path: path('M 600 50 Q 650 300 200 100 Q 0 200 650 400 Q 0 450 650 500 C 500 600 600 600 50 550 C 50 300 750 550 750 350 C 350 50 150 100 50 350 ');
+  }
+
+  #bat5{
+    top:-300px;
+    left:450px;
+    offset-path: path('M 150 50 Q 0 150 50 500 C 350 550 300 600 700 250 Q 0 450 600 500 C 500 600 600 600 350 200 C 100 550 0 350 200 200 C 800 100 0 250 600 0 ');
+  }
+  #bat6{
+    top:0px;
+    left:0px;
+    offset-path: path('M 50 50 Q 650 300 750 200 Q 500 300 400 50 Q 0 450 650 350 C 100 450 600 600 50 550 C 50 300 475 375 100 200 C 350 50 500 250 800 50 ');
+  }
+
+  #bat7{
+    top:-40px;
+    left:50px;
+    offset-path: path('M 300 200 Q 750 100 650 450 C 350 550 300 600 0 500 Q 0 450 600 150 C 500 600 600 600 250 150 C 50 300 750 550 450 150 C 700 0 150 100 350 150 ');
+  }
+  #bat8{
+    top:-10px;
+    left:30px;
+    offset-path: path('M 250 0 Q 650 300 100 100 Q 0 200 100 250 Q 0 450 100 550 C 100 450 600 600 750 500 C 50 300 475 375 650 300 C 350 50 150 100 800 50 ');
+  }
+  #bat9{
+    top:-400px;
+    left:300px;
+    offset-path: path('M 750 550 Q 0 150 600 100 C 350 550 300 600 50 450 C 250 0 375 350 650 250 C 500 600 600 600 0 100 C 100 550 0 350 800 350 C 800 100 0 250 650 150 ');
+  }
+  #bat10{
+    top:10px;
+    left:-375px;
+    offset-path: path('M 50 600 Q 0 150 200 250 C 450 600 300 600 650 50 C 250 0 600 350 50 100 C 500 600 600 600 600 300 C 100 550 0 350 200 50 C 800 100 0 250 700 550 ');
+  }
+
+
+
+  @keyframes batflight {
+    0%{
+      visibility: visible;
+      offset-distance: 0%;
+    }
+    25%{
+      visibility: visible;
+      offset-distance: 25%;
+      transform:scale(200%);
+    }
+    
+    50%{
+      visibility: visible;
+      offset-distance: 50%;
+      transform:scale(400%);
+    }
+    75%{
+      visibility: visible;
+      offset-distance: 75%;
+      transform:scale(750%);
+    }
+    100%{
+      visibility: visible;
+      offset-distance: 100%;
+      transform:scale(1300%);
+    }
+
+  }
+
+
+/* delay showing the hero text until we are ready */
+  @keyframes hide-text {
+    0%,100%{visibility: hidden}
+  }
+
+  /* set up all the slides for our slide show */
+  @keyframes startscreen {
+    0%,100% {background-image:url('../images/dark-batman.gif');}
+  }
+
+  @keyframes splat {
+    0%{
+     background-image:url('../images/splat.png');
+     opacity: 1; 
+     transform:scale(100%);
+  }
+  100%{
+    background-image:url('../images/splat.png');
+    opacity: 0; 
+    transform:scale(50%);
+  }
+}
+
+  @keyframes batmankick{
+    0%,100%{
+    background-image:url('../images/batman-kick.gif');
+  }
+  }
+
+  @keyframes pow {
+    0%{
+      background-image:url('../images/pow.png');
+      opacity: 1; 
+      transform:scale(100%);
+   }
+   100%{
+     background-image:url('../images/pow.png');
+     opacity: 0; 
+     transform:scale(50%);
+   }
+ }
+
+ @keyframes batlogo{
+  0%{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/batman.jpg");
+    opacity: 0; 
+    transform:scale(50%);
+   }
+   100%{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/batman.jpg");
+    opacity: 1; 
+    transform:scale(100%);
+   }
+ }
