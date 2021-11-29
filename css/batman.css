@@ -42,9 +42,9 @@ body, html {
     position: relative;
     overflow: hidden;
     /* Set out slideshow */
-    animation: startscreen, splat, batmankick, pow, batlogo;
-    animation-delay:    0s, 6s, 8s, 9.25s, 12.25s;
-    animation-duration: 6s, 2s, 1.25s, 3s, 2s;
+    animation: startscreen, splat, shatter, batmankick, pow, batlogo;
+    animation-delay:    0s, 6s, 5.5s, 8s, 9.25s, 12.25s;
+    animation-duration: 6s, 2s, .5s, 1.25s, 3s, 2s;
   }
   
   /* Place text in the middle of the image */
@@ -249,4 +249,12 @@ body, html {
     opacity: 1; 
     transform:scale(100%);
    }
+ }
+
+ @keyframes shatter {
+   0%,100%{
+    background-image:url('../images/shatter.png');
+    transform:scale(100%);
+    opacity:.4   
+  }
  }
