@@ -1,3 +1,4 @@
+/* code pen to help create paths */
 /* https://codepen.io/anthonydugois/pen/mewdyZ */
 
 body, html {
@@ -12,7 +13,7 @@ body, html {
     letter-spacing: .15em; /* Adjust as needed */
     /* animation-delay: 25s; */
     animation: 
-      typing 5s steps(40, end) 16s,
+      typing 5s steps(88, end) 16s,
       blink-caret .75s step-end infinite 16s;
   }
   
@@ -25,7 +26,7 @@ body, html {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange; }
+    50% { border-color: white; }
   }
 
   /* The hero image */
@@ -69,6 +70,7 @@ body, html {
     animation-delay:2s;
     height:50px;
   }
+
 
   /* create all our bats at randoms positions with random paths */
   #bat1{
@@ -125,19 +127,70 @@ body, html {
     left:-375px;
     offset-path: path('M 50 600 Q 0 150 200 250 C 450 600 300 600 650 50 C 250 0 600 350 50 100 C 500 600 600 600 600 300 C 100 550 0 350 200 50 C 800 100 0 250 700 550 ');
   }
-
-
+  #bat11{
+    top:125px;
+    left:-125px;
+    offset-path: path('M 100 300 Q 200 500 300 100 Q 250 550 400 550 Q 350 50 600 50 C 450 550 450 50 50 500 C 550 50 550 550 50 150 A 50 50 0 1 1 500 550 ');
+  }
+  #bat12{
+    top:-125px;
+    left:125px;
+    offset-path: path('M 100 300 Q 200 500 100 550 Q 250 550 550 200 Q 350 50 750 150 C 450 550 800 200 450 550 C 50 400 550 550 300 300 A 50 50 0 1 1 250 50 ');
+  }
+  #bat13{
+    top:-125px;
+    left:-125px;
+    offset-path: path('M 100 550 Q 200 500 50 200 Q 250 550 550 200 Q 350 50 750 150 C 100 200 800 200 800 600 C 50 400 550 550 150 50 C 0 250 650 200 250 50 ');
+  }
+  #bat14{
+    top:270px;
+    left:-280px;
+    offset-path: path('M 550 50 Q 800 300 300 550 Q 250 550 250 300 Q 350 50 450 200 C 100 200 800 200 800 600 C 50 400 550 550 150 50 C 0 250 250 400 50 500 ');
+  }
+  #bat15{
+    top:15px;
+    left:60px;
+    offset-path: path('M 550 50 Q 800 300 150 100 Q 250 550 700 250 Q 350 50 150 300 C 100 200 800 200 450 450 C 50 400 550 550 300 550 C 0 250 250 400 50 500 ');
+  }
+  #bat16{
+    top:-345px;
+    left:-200px;
+    offset-path: path('M 50 100 Q 150 50 100 500 Q 250 550 250 350 Q 350 50 300 550 C 450 550 450 50 500 450 C 550 50 550 550 650 350 Q 800 100 800 400 ');
+  }
+  #bat17{
+    top:300px;
+    left:-250px;
+    offset-path: path('M 50 100 Q 0 350 100 500 Q 200 50 250 350 Q 250 0 450 100 C 450 550 50 300 500 450 C 450 0 600 350 750 150 Q 600 450 800 400 ');
+  }
+  #bat18{
+    top:220px;
+    left:222px;
+    offset-path: path('M 700 550 Q 0 350 100 100 Q 200 50 250 150 Q 350 300 50 450 C 400 600 50 300 650 300 C 800 50 550 0 300 100 Q 400 550 800 400 ');
+  }
+  #bat19{
+    top:222px;
+    left:-220px;
+    offset-path: path('M 100 300 Q 150 50 300 100 Q 400 50 500 100 Q 700 100 700 200 C 450 550 650 350 650 550 C 300 100 550 550 250 450 A 50 50 0 1 1 400 200 ');
+  }
+  #bat20{
+    top:120px;
+    left:150px;
+    offset-path: path('M 250 300 Q 150 50 300 100 Q 400 50 650 0 Q 700 100 750 550 C 450 550 650 350 400 200 C 300 350 550 550 250 450 A 50 50 0 1 1 250 50 ');
+  }
 
   @keyframes batflight {
     0%{
       visibility: visible;
       offset-distance: 0%;
-    }
+      transform:scale(20%);
 
+    }
+    75%{
+      transform:scale(400%);
+    }
     100%{
-      visibility: visible;
       offset-distance: 100%;
-      transform:scale(1300%);
+      transform:scale(1500%);
     }
 
   }
