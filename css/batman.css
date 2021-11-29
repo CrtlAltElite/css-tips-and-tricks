@@ -133,22 +133,7 @@ body, html {
       visibility: visible;
       offset-distance: 0%;
     }
-    25%{
-      visibility: visible;
-      offset-distance: 25%;
-      transform:scale(200%);
-    }
-    
-    50%{
-      visibility: visible;
-      offset-distance: 50%;
-      transform:scale(400%);
-    }
-    75%{
-      visibility: visible;
-      offset-distance: 75%;
-      transform:scale(750%);
-    }
+
     100%{
       visibility: visible;
       offset-distance: 100%;
