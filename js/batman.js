@@ -1,10 +1,10 @@
 const playlist=()=>{
 
-    var audio = new Audio('../audio/rain.mp3');
-    var audio2 = new Audio('../audio/bats.mp3');
-    var audio3 = new Audio('../audio/glass.mp3');
-    var audio4 = new Audio('../audio/theme.mp3');
-    var audio5 = new Audio('../audio/typing.mp3')
+    var audio = new Audio('./../audio/rain.mp3');
+    var audio2 = new Audio('./../audio/bats.mp3');
+    var audio3 = new Audio('./../audio/glass.mp3');
+    var audio4 = new Audio('./../audio/theme.mp3');
+    var audio5 = new Audio('./../audio/typing.mp3')
     audio.play();
     audio.currentTime=4;
     id1=pauser(audio,7)
