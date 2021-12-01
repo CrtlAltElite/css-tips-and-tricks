@@ -92,4 +92,4 @@ newDiv.style.backgroundColor='black';
 newDiv.style.fontFamily='batman';
 newDiv.style.fontSize='2.5em';
 
-document.getElementsByClassName('slowmo-img')[0].onmouseover(setTimeout(()=>document.getElementsByClassName('slowmo-img')[0].appendChild(newDiv),3000))
+document.getElementsByClassName('slowmo-img')[0].onmouseover=(()=>setTimeout(()=>document.getElementsByClassName('slowmo-img')[0].appendChild(newDiv),3000))
