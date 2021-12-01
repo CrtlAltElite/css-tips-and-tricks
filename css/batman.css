@@ -5,6 +5,11 @@ body, html {
     height: 100%;
 }
 
+@font-face {
+  font-family: 'batman'; /*a name to be used later*/
+  src: url('../fonts/batmfa__.ttf'); /*URL to font*/
+}
+
 .type-writer {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
@@ -258,3 +263,24 @@ body, html {
     opacity:.4   
   }
  }
+
+.slowmo-img{
+  overflow:hidden;
+}
+/* Slow-motion Zoom Container */
+.slowmo-img img {
+  transform-origin: 63% 39%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+}
+ 
+/* The Transformation */
+.slowmo-img:hover img {
+  filter: brightness(100%);
+  transform: scale(8);
+}
+
+.navbar-brand, h1{
+  font-family: "batman";
+  color:#FDE311 !important;
+}
