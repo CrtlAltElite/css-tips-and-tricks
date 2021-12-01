@@ -220,7 +220,7 @@ body, html {
   100%{
     background-image:url('../images/splat.png');
     opacity: 0; 
-    transform:scale(50%);
+    transform:scale(50%) rotate(360deg);
   }
 }
 
@@ -239,7 +239,8 @@ body, html {
    100%{
      background-image:url('../images/pow.png');
      opacity: 0; 
-     transform:scale(50%);
+     transform:scale(50%) rotate(360deg);
+
    }
  }
 
